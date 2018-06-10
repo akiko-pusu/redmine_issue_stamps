@@ -1,3 +1,6 @@
+require 'redmine'
+require 'issue_stamps/redmine_hook_patch'
+
 Redmine::Plugin.register :redmine_issue_stamps do
   name 'Redmine Issue Stamps plugin'
   author 'Akiko Takano'
@@ -5,4 +8,11 @@ Redmine::Plugin.register :redmine_issue_stamps do
   version '0.0.1-dev'
   url 'https://github.com/akiko-pusu/redmine_issue_stamps'
   author_url 'https://github.com/akiko-pusu'
+
+  unless Rails.env.production?
+    settings partial: 'settings/redmine_issue_stamps',
+             default: {
+               'display_view_hook_points' => false
+             }
+  end
 end

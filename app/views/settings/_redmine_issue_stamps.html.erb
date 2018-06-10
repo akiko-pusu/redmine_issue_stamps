@@ -1,0 +1,9 @@
+<div class="form-inline issue_stamps">
+  <% unless Rails.env.production? %>
+    <p>
+      Display View Hook points
+      <%= hidden_field_tag("settings[display_view_hook_points]", 0, :id => nil).html_safe %>
+      <%= check_box_tag 'settings[display_view_hook_points]', true, @settings['display_view_hook_points'] == 'true' %>
+    </p>
+  <% end %>
+</div>
