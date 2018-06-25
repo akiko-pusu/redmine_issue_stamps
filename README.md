@@ -12,6 +12,7 @@ Now description is Japanese only.
   - ワークフローとは独立した形で承認情報を追加、保持できる
 
 上記を目指して、コツコツとチャレンジ中です。
+まだ今の所、ViewHookの場所を提示するくらいしかできません。
 
 
 ### Repository / リポジトリ
